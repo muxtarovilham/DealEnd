@@ -1,0 +1,283 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header{
+    width: 100%;
+    min-height: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding-top: 21px;
+    background-image: url(https://e0.pxfuel.com/wallpapers/188/467/desktop-wallpaper-osmanl%C4%B1-padi%C5%9Fahlar%C4%B1-osmanl%C4%B1-padi%C5%9Fahlar%C4%B1.jpg);
+    background-position: center top; /* Resmin konumunu belirleme - yukarı kaydırmak için 'center top' kullanıyoruz */
+    background-size: cover;
+    nav{
+        width: 90%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .dropdown{
+            display: none;
+            .dropdownUl{
+                list-style-type: none;
+                padding: 7px;
+                li{
+                    a{
+                        color: black;
+                        text-decoration: none;
+                        &:hover{
+                            color: red;
+                        }
+                    }
+                }
+            }
+        }
+        .navUl{
+            width: 40%;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style-type: none;
+            li{
+                a{
+                    color: black;
+                    text-decoration: none;
+                    &:hover{
+                        color: red;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+            header{
+                nav{
+                    .navUl{
+                        display: none;
+                    }
+                    .dropdown{
+                        display: block;
+                    }
+                }
+                
+            }
+}
+main{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 21px;
+    background-color: rgb(246, 246, 246);
+    .searchAndSort{
+        width: 90%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .sort{
+            width: 40%;
+            height: auto;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            gap: 14px;
+           .downmenu{
+            ul{
+                display: flex;
+                justify-content: center;
+                align-items: start;
+                flex-direction: column;
+                list-style-type: none;
+                li{
+                    padding: 3px;
+                    width: 100%;
+                    height: auto;
+                    button{
+                        text-align: start;
+                        padding-left: 14px;
+                        width: 100%;
+                        height: 40px;
+                        border: none;
+                        background-color: transparent;
+                        border-radius: 3px;
+                        &:hover{
+                            font-weight: 700;
+                            color: orange;
+                            background-color: rgb(236, 236, 236);
+                        }
+                    }
+                }
+            }
+
+           }
+        }
+        #formOfSearch{
+            width: 40%;
+            height: auto;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            button{
+                width: 20%;
+                height: 40px;
+                background-color: black;
+                border: 2px solid black;
+                color: white;
+                font-weight: 700;
+                border-top-right-radius: 7px;
+                border-bottom-right-radius: 7px;
+                padding: 7px;
+                &:hover{
+                    background-color: white;
+                    color: black;
+                }
+            }
+            input{
+                width: 40%;
+                height: 40px;
+                border: 1px solid gainsboro;
+                border-top-left-radius: 7px;
+                border-bottom-left-radius: 7px;
+                padding: 7px;
+            }
+        }
+    }
+    #forme{
+        width: 66%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+        gap: 14px;
+        background-color: rgb(75, 75, 75);
+        padding: 14px;
+        border-radius: 7px;
+        input{
+            width: 100%;
+            height: 40px;
+            border-radius: 7px;
+            border: none;
+            padding: 7px;
+            background-color: black;
+            color: white;
+            &::placeholder{
+                color: white;
+            }
+        }
+        button{
+            background-color: black;
+            color: white;
+            width: 148px;
+            height: 40px;
+            border: 2px solid black;
+            font-weight: 700;
+            border-radius: 7px;
+            transition: background-color 0.3s ease;
+            &:hover{
+                background-color: rgb(75, 75, 75);
+            }
+        }
+    }
+    .lists{
+        width: 90%;
+        height: auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        color: orange;
+        font-weight: 700;
+    }
+    #addProducts{
+        width: 90%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: white;
+        .box{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: start;
+                align-items: center;
+
+                td{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 25%;
+                    min-height: 130px;
+                    border: 1px solid gainsboro;
+                    button{
+                        width: 40%;
+                        height: 40px;
+                        border: 2px solid black;
+                        color: white;
+                        font-weight: 700;
+                        background-color: black;
+                        transition: 0.3s ease;
+                        &:hover{
+                            background-color: white;
+                            color: black;
+                        }
+                    }
+
+                    img{
+                        width: 30%;
+                        height: auto;
+                        border-radius: 50%;
+                    }
+                }
+
+
+        }
+    }
+    #product{             
+        border-radius: 7px;
+        background-color: white;
+        .box{        
+            padding: 7px;
+            .boxes{
+                border: 2px solid gainsboro;
+
+                width: 95%;
+                height: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: start;
+                flex-direction: column;
+                border-radius: 7px;
+                gap: 14px;
+                padding: 7px;
+                p{
+                    width: 100%;
+                }
+                img{
+                    width: 100%;
+                    height: auto;
+                    overflow: hidden;
+                    transition: 0.5s ease;
+                    border-radius: 6px;
+                    &:hover{
+                        scale: 1.1;
+                    }
+                }
+
+            }
+        }
+    }
+}
